@@ -13,15 +13,15 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-content">
-            <div class="logo">MY JOURNEY</div>
+            <div class="logo">JC SHOP</div>
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
                 <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('about') }}">About</a></li>
-                <li><a href="{{ route('journey') }}">Journey</a></li>
-                <li><a href="{{ route('products') }}">Shop</a></li>
+                <li><a href="{{ route('home') }}/#journey">Journey</a></li>
+                <li><a href="{{ route('add-products') }}">Add Product</a></li>
+                <li><a href="{{ route('shop') }}">Shop</a></li>
             </ul>
         </div>
     </nav>

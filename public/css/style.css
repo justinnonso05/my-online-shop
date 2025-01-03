@@ -28,6 +28,9 @@
     background: #555; /* Color of the scrollbar thumb on hover */
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -51,12 +54,12 @@ nav {
 }
 
 .nav-content {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0rem;
 }
 
 nav.transparent {
@@ -69,17 +72,23 @@ nav.scrolled {
 }
 
 .logo {
-    font-family: 'Lobster', cursive;
+    font-family: 'Poppins', 'Lobster', cursive;
+    font-weight: 900;
     font-size: 1.5rem;
     color: var(--accent);
+    background-color: var(--primary-light);
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 15px; 
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
+    margin-right: 30px; /* Pushes the nav links to the far right */
 }
-
 .nav-links a {
     color: var(--text-primary);
     text-decoration: none;
@@ -94,6 +103,7 @@ nav.scrolled {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
+    margin-right: 30px;
 }
 
 /* Hero Section */
@@ -131,6 +141,7 @@ nav.scrolled {
     background-color: var(--primary-light);
     padding: 2rem;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -401,5 +412,154 @@ nav.scrolled {
 
     .product-item {
         padding: 1.5rem;
+    }
+}
+
+/* add products page  */
+
+/* Add Product Section */
+.add-product {
+    padding: 5rem 2rem;
+    background-color: var(--primary-light);
+}
+
+.add-product h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--text-primary);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--primary-dark);
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.form-container:hover {
+    border-color: var(--accent);
+    box-shadow: 0 5px 15px rgba(5, 226, 255, 0.1);
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid var(--text-secondary);
+    background-color: var(--primary-light);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(5, 226, 255, 0.1);
+}
+
+/* File Upload Styling */
+.image-upload {
+    position: relative;
+}
+
+.image-upload input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.upload-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px dashed var(--text-secondary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-label:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.upload-label i {
+    font-size: 1.5rem;
+}
+
+.file-name {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent);
+    color: var(--primary-dark);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .add-product {
+        padding: 4rem 1rem;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .add-product h2 {
+        font-size: 2rem;
+    }
+
+    .upload-label {
+        flex-direction: column;
+        text-align: center;
     }
 }
