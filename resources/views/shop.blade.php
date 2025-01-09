@@ -8,9 +8,10 @@
         <div class="products-container">
             @foreach($products as $product)
                 <div class="product-item">
-                    <h3>{{ $product['name'] }}</h3>
-                    <p>{{ $product['description'] }}</p>
-                    <p>Price: ${{ $product['price'] }}</p>
+                    <img src="{{ asset($product->image_path) }}" alt="{{ $product->name }}">
+                    <h3>{{ $product->name }}</h3>
+                    <p>{{ $product->description }}</p>
+                    <p>Price: ${{ $product->price }}</p>
                 </div>
             @endforeach
         </div>

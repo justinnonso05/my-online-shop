@@ -20,8 +20,8 @@
             <ul class="nav-links">
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('home') }}/#journey">Journey</a></li>
-                <li><a href="{{ route('add-products') }}">Add Product</a></li>
-                <li><a href="{{ route('shop') }}">Shop</a></li>
+                <li><a href="{{ route('products.add') }}">Add Product</a></li>
+                <li><a href="{{ route('products.shop') }}">Shop</a></li>
             </ul>
         </div>
     </nav>
@@ -48,7 +48,7 @@
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="{{ route('about') }}">About</a></li>
                     <li><a href="{{ route('journey') }}">Journey</a></li>
-                    <li><a href="{{ route('shop') }}">Shop</a></li>
+                    <li><a href="{{ route('products.shop') }}">Shop</a></li>
                 </ul>
             </div>
             <div class="footer-right">

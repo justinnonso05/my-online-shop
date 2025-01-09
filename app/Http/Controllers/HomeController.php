@@ -22,14 +22,4 @@ class HomeController extends Controller
         return view('about');
     }
 
-    public function journey()
-    {
-        $journeyItems = [
-            ['year' => '2018', 'description' => 'Started my journey in web development'],
-            ['year' => '2021', 'description' => 'Completed my first major project'],
-            ['year' => '2022', 'description' => 'Launched my first business venture'],
-        ];
-
-        return view('journey', compact('journeyItems'));
-    }
 }

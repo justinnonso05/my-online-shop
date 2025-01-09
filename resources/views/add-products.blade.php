@@ -6,7 +6,7 @@
     <section id="add-product" class="add-product">
         <h2>Add New Product</h2>
         <div class="form-container">
-            <form action="/products" method="POST" enctype="multipart/form-data" class="product-form">
+            <form action="{{ route ('products.store') }}" method="POST" enctype="multipart/form-data" class="product-form">
                 @csrf
                 <div class="form-group">
                     <label for="name">Product Name</label>
