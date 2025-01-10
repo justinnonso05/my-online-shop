@@ -52,6 +52,9 @@ nav {
     transition: background-color 0.3s ease;
     padding: 1rem 0;
 }
+.nav.active {
+    background: var(--primary-dark);
+}
 
 .nav-content {
     /* max-width: 1200px; */
@@ -387,12 +390,33 @@ nav.scrolled {
     line-height: 1.6;
 }
 
-.product-item p:last-child {
+.price-order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-left: 10px;
+}
+
+.product-item .price-order p {
     color: var(--accent);
     font-weight: 600;
     margin-left: 10px;
     margin-top: auto;
 }
+
+.product-item .price-order a {
+    padding: 0.5rem 1rem;
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-right: 10px;
+    /* float: right; */
+}
+
 .product-item img {
     width: 100%;
     height: 200px;

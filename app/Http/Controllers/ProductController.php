@@ -45,4 +45,10 @@ class ProductController extends Controller
         $products = Product::all();
         return view('shop', compact('products'));
     }
+
+    public function order($id)
+    {
+        $product = Product::find($id);
+        return view('order', compact('product'));
+    }
 }

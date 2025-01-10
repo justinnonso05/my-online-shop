@@ -10,4 +10,4 @@ Route::get('/journey', [HomeController::class, 'journey'])->name('journey');
 Route::get('/add-products', [ProductController::class, 'add_products'])->name('products.add');
 Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 Route::get('/shop', [ProductController::class, 'shop'])->name('products.shop');
-// Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+Route::get('/products/order/{id}', [ProductController::class, 'order'])->name('products.order');

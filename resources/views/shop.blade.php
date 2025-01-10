@@ -11,7 +11,10 @@
                     <img src="{{ asset($product->image_path) }}" alt="{{ $product->name }}">
                     <h3>{{ $product->name }}</h3>
                     <p>{{ $product->description }}</p>
-                    <p>Price: ${{ $product->price }}</p>
+                    <div class="price-order">
+                        <p>Price: ${{ $product->price }}</p>
+                        <a href="{{ route('products.order', $product->id) }}" class="order-btn">Order Now</a>
+                    </div>
                 </div>
             @endforeach
         </div>

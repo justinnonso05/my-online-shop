@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="nav">
         <div class="nav-content">
             <div class="logo">JC SHOP</div>
             <div class="nav-toggle" id="navToggle">
