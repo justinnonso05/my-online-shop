@@ -27,11 +27,6 @@
                     <label for="image">Product Image</label>
                     <div class="image-upload">
                         <input type="file" id="image" name="image" accept="image/*" required>
-                        <label for="image" class="upload-label">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <span>Choose an image</span>
-                        </label>
-                        <div class="file-name"></div>
                     </div>
                 </div>
 

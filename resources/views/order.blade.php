@@ -48,6 +48,11 @@
             gap: 1.5rem;
             overflow: hidden;
         }
+        .product-item:hover {
+            transform: none;
+            border-color: none;
+            box-shadow: 0 0px 0px transparent !important;
+        }
 
         .product-item img {
             width: 100%;

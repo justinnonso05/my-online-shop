@@ -17,12 +17,11 @@
     </section>
 
     <section id="journey" class="journey">
-        <h2>My Life Journey<br> <span style="font-size: 11px;" class="subtitle">Fast foward to 2018 🙂</span></h2>
+        <h2>About Me<br> <span style="font-size: 11px;" class="subtitle">Follow me through this quick journey 🙂</span></h2>
         <div class="journey-container">
             @foreach($journeyItems as $item)
                 <div class="journey-item">
                     <div class="journey-content">
-                        <h3>{{ $item['year'] }}</h3>
                         <p>{{ $item['description'] }}</p>
                     </div>
                 </div>

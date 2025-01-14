@@ -19,9 +19,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ route('home') }}/#journey">Journey</a></li>
-                <li><a href="{{ route('products.add') }}">Add Product</a></li>
+                <li><a href="{{ route('home') }}/#journey">About</a></li>
                 <li><a href="{{ route('products.shop') }}">Shop</a></li>
+                <li><a href="{{ route('products.add') }}">Add Product</a></li>
             </ul>
         </div>
     </nav>
@@ -33,34 +33,31 @@
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-left">
-                <h3>About</h3>
-                <p>A passionate developer documenting the journey through code, one commit at a time.</p>
+                <p>A software developer with passion to build and deliver.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/justinnonso05" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/justondev" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/justinonso05" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer-center">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="{{ route('home') }}">Home</a></li>
-                    <li><a href="{{ route('about') }}">About</a></li>
-                    <li><a href="{{ route('journey') }}">Journey</a></li>
+                    <li><a href="{{ route('home') }}/#journey">About</a></li>
                     <li><a href="{{ route('products.shop') }}">Shop</a></li>
                 </ul>
             </div>
             <div class="footer-right">
                 <h3>Contact</h3>
                 <ul class="contact-info">
-                    <li><i class="fas fa-envelope"></i> hello@myjourney.dev</li>
-                    <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    <li><i class="fas fa-envelope"></i> justondev05@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> University Of Ibadan</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; {{ date('Y') }} My Journey. All rights reserved.</p>
+            <p>&copy; {{ date('Y') }} JC SHOP. All rights reserved.</p>
         </div>
     </footer>
     

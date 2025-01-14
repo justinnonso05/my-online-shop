@@ -4,7 +4,10 @@
 
 @section('content')
     <section id="products" class="products">
-        <h2>Our Products</h2>
+        <div class="products-head">
+            <h1>Our Products</h1>
+            <p><a class="add-product-link" href="{{ route('products.add') }}">Add Products</a></p>   
+        </div>
         <div class="products-container">
             @foreach($products as $product)
                 <div class="product-item">
