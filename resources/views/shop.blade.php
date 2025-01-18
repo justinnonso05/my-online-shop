@@ -11,12 +11,16 @@
         <div class="products-container">
             @foreach($products as $product)
                 <div class="product-item">
-                    <img src="{{ asset($product->image_path) }}" alt="{{ $product->name }}">
-                    <h3>{{ $product->name }}</h3>
-                    <p>{{ $product->description }}</p>
+                    <img src="{{ asset(is_array($product) ? $product['image_path'] : $product->image_path) }}" alt="{{ is_array($product) ? $product['name'] : $product->name }}">
+                    <h3>{{ is_array($product) ? $product['name'] : $product->name }}</h3>
+                    <p>{{ is_array($product) ? $product['description'] : $product->description }}</p>
                     <div class="price-order">
-                        <p>Price: ${{ $product->price }}</p>
-                        <a href="{{ route('products.order', $product->id) }}" class="order-btn">Order Now</a>
+                        <p>Price: ${{ is_array($product) ? $product['price'] : $product->price }}</p>
+                        @if(!isset($product['is_dummy']))
+                            <a href="{{ route('products.order', ['id' => $product['id']]) }}" class="order-btn">Order Now</a>
+                        @else
+                            <a href="{{ route('products.dummy_order') }}" class="order-btn">Order Now</a>
+                        @endif
                     </div>
                 </div>
             @endforeach

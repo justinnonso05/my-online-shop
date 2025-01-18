@@ -50,8 +50,8 @@
         }
         .product-item:hover {
             transform: none;
-            border-color: none;
-            box-shadow: 0 0px 0px transparent !important;
+            border-color: transparent;
+            box-shadow: 0 0px 0px transparent;
         }
 
         .product-item img {
@@ -209,7 +209,7 @@
             </div>
             
             <div class="order-form-container">
-                <form action="#" method="POST" class="order-form">
+                <form action="" method="POST" class="order-form">
                     @csrf
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -237,12 +237,12 @@
                         <div class="form-group">
                             <label for="card_number">Card Number</label>
                             <input type="text" id="card_number" name="card_number" 
-                                   pattern="[0-9]{16}" placeholder="1234 5678 9012 3456" required>
+                                    placeholder="1234 5678 9012 3456" required>
                         </div>
                         <div class="form-group">
                             <label for="expiry">Expiry</label>
                             <input type="text" id="expiry" name="expiry" 
-                                   pattern="(0[1-9]|1[0-2])\/([0-9]{2})" placeholder="MM/YY" required>
+                                    placeholder="MM/YY" required>
                         </div>
                         <div class="form-group">
                             <label for="cvv">CVV</label>
@@ -255,5 +255,17 @@
                 </form>
             </div>
         </div>
+
+        <script>
+            const order = () => {
+                alert('Order Placed Successfully!\n\nPlease check your mail for further instructions.\nThank you for shopping with us.');
+            }
+
+            const form = document.querySelector('.order-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                order();
+            });
+        </script>
     </section>
 @endsection

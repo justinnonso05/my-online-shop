@@ -43,12 +43,56 @@ class ProductController extends Controller
     public function shop()
     {
         $products = Product::all();
-        return view('shop', compact('products'));
+
+        // dummy template data
+        $dummyProducts = [
+            [
+                'id' => 1,
+                'name' => 'MacBook Pro',
+                'description' => 'The latest MacBook Pro with M1 chip, 16GB RAM, and 512GB SSD.',
+                'price' => 10.99,
+                'image_path' => 'images/lappy1.jpg',
+                'is_dummy' => true
+            ],
+            [
+                'id' => 2,
+                'name' => 'HP Elitebook',
+                'description' => 'The HP Elitebook with Intel i7 processor, 16GB RAM, and 1TB SSD.',
+                'price' => 15.99,
+                'image_path' => 'images/lappy2.jpg',
+                'is_dummy' => true
+            ],
+            [
+                'id' => 3,
+                'name' => 'Lenovo laptop',
+                'description' => 'The Lenovo laptop with AMD Ryzen 5 processor, 8GB RAM, and 256GB SSD.',               
+                'price' => 20.99,
+                'image_path' => 'images/lappy3.jpg',
+                'is_dummy' => true
+            ],
+            [
+                'id' => 4,
+                'name' => 'Apple Mouse',
+                'description' => 'Apple Mouse with wireless connectivity and multi-touch surface.',
+                'price' => 25.99,
+                'image_path' => 'images/mouse.jpg',
+                'is_dummy' => true
+            ],
+        ];
+
+        $products = array_merge($dummyProducts, $products->toArray());
+
+        return view('shop', ['products' => $products]);
     }
 
     public function order($id)
     {
         $product = Product::find($id);
         return view('order', compact('product'));
+    }
+
+    public function dummy_order()
+    {
+        return view('dummy_order');
     }
 }

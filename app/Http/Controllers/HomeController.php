@@ -9,7 +9,7 @@ class HomeController extends Controller
     public function index()
     {
         $journeyItems = [
-            ['description' => "My name is Justin Chinonso, I'm a software developer and a computer science studentg at the university of Iabdan"],
+            ['description' => "My name is Justin Chinonso, I'm a software developer and a computer science studentg at the university of Ibadan"],
             ['description' => 'I started my software developer journey in 2020, and since then I have developed many projects'],
             ['description' => 'Built my first main project in 2021, a Social media platform for developers to interact and share ideas'],
             ['description' => 'I have worked with many clients and companies to develop their software projects'],

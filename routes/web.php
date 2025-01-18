@@ -11,3 +11,4 @@ Route::get('/add-products', [ProductController::class, 'add_products'])->name('p
 Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 Route::get('/shop', [ProductController::class, 'shop'])->name('products.shop');
 Route::get('/products/order/{id}', [ProductController::class, 'order'])->name('products.order');
+Route::get('/products/order/', [ProductController::class, 'dummy_order'])->name('products.dummy_order');
