@@ -9,7 +9,7 @@ Ensure you have the following installed:
 - ```cd my-online-shop```
 - ```composer install```
 - ```npm install```
-- Create a .env file in the root directory similar to the already provided .env.example file and edit the database connection credentials accordingly
+- Edit the .env file in the root directory similar to the already provided .env.example file and edit the database connection credentials accordingly
 - ```php artisan migrate```  <!-- for database migration -->
 
 ### then to run the application

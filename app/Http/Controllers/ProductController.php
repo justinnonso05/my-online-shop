@@ -24,7 +24,7 @@ class ProductController extends Controller
 
         // Get the image file
         $image = $request->file('image');
-        // Create unique filename
+        // Create unique filename with time uploaded
         $imageName = time() . '_' . $image->getClientOriginalName();
         // Move the file to public/images
         $image->move(public_path('images'), $imageName);

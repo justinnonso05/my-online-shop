@@ -10,7 +10,7 @@
     @stack('styles')
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation aspect-->
     <nav class="nav">
         <div class="nav-content">
             <div class="logo">JC SHOP</div>
@@ -26,7 +26,7 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- this is the main Content -->
     <main>
         @yield('content')
     </main>
