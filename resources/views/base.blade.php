@@ -60,6 +60,13 @@
             <p>&copy; {{ date('Y') }} JC SHOP. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+        document.querySelector(".nav").classList.toggle('active');
+    });
+    </script>
     
     <script src="{{ asset('js/script.js') }}"></script>
     @stack('scripts')

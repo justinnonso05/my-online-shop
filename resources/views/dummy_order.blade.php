@@ -201,7 +201,7 @@
         <div class="layout-container">
             <div class="products-order-container">
                 <div class="product-item">
-                    <img src="{{ asset('images/logo.jpg') }}" alt="dummy name">
+                    <img src="{{ asset('images/lappy1.jpg') }}" alt="dummy name">
                     <h3>HP ELiteBook </h3>
                     <p>Core i7 HP Elitebook 8gb ram 256gb ROM SSD.</p>
                     <p>Price: $200</p>
